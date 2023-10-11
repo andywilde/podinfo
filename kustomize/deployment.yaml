@@ -21,9 +21,11 @@ spec:
       labels:
         app: podinfo
     spec:
+      nodeSelector:
+        agentpool: sharedsvc
       containers:
       - name: podinfod
-        image: ghcr.io/stefanprodan/podinfo:6.5.1
+        image: acrlvfsshareduksouth001.azurecr.io/stefanprodan/podinfo:6.4.1
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
